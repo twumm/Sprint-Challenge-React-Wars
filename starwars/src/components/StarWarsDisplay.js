@@ -6,7 +6,8 @@ export default function StarWarsDisplay(
     starWarsChars,
     nextListUrl,
     previousListUrl,
-    getCharacters
+    getCharacters,
+    onLoading
   }) {
 
   const onGetCharacters = (event, URL) => {
@@ -19,21 +20,30 @@ export default function StarWarsDisplay(
         <StarWarsList starWarsChars={starWarsChars} />
       </div>
       <div className="pagination-buttons">
-        <button
-          className="previous-button"
-          style={!previousListUrl ? {display: 'none'} : null }
-          onClick={(event) => onGetCharacters(event, previousListUrl)}
-        >
-          Previous
-        </button>
+        {
+          !onLoading
+          ?
+          <div>
+            <button
+              className="previous-button"
+              style={!previousListUrl ? {display: 'none'} : null }
+              onClick={(event) => onGetCharacters(event, previousListUrl)}
+            >
+              Previous
+            </button>
 
-        <button
-          className="next-button"
-          style={!nextListUrl ? {display: 'none'} : null}
-          onClick={(event) => onGetCharacters(event, nextListUrl)}
-        >
-          Next
-        </button>
+            <button
+              className="next-button"
+              style={!nextListUrl ? {display: 'none'} : null}
+              onClick={(event) => onGetCharacters(event, nextListUrl)}
+            >
+              Next
+            </button>
+          </div>
+          :
+          <span className='loader'></span>
+        }
+        
       </div>
     </div>
   )
