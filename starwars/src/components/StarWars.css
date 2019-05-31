@@ -1,0 +1,31 @@
+/* StarWarsDisplay */
+.character-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* StarWarsList */
+.character-card {
+  width: 30%;
+  background-color: white;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.character-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#character-name {
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+
+#character-gender {
+  padding-right: 10px;
+}
