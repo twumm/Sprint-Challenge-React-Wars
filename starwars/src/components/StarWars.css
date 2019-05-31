@@ -5,6 +5,30 @@
   justify-content: space-around;
 }
 
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-buttons button {
+  background-color: #e7e7e7;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  width: 140px;
+  margin: 10px 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.next-button {
+  margin-left: 10px;
+}
+
 /* StarWarsList */
 .character-card {
   width: 30%;
