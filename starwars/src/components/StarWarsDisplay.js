@@ -43,7 +43,6 @@ export default function StarWarsDisplay(
           :
           <span className='loader'></span>
         }
-        
       </div>
     </div>
   )
