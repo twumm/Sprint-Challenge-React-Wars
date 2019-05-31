@@ -28,7 +28,7 @@ export default function StarWarsDisplay(
         </button>
 
         <button
-          className="previous-button"
+          className="next-button"
           style={!nextListUrl ? {display: 'none'} : null}
           onClick={(event) => onGetCharacters(event, nextListUrl)}
         >
