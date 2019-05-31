@@ -61,7 +61,7 @@
   font-size: 1.2rem;
 }
 
-/* Loading animation */
+/* Loading animation - https://projects.lukehaas.me/css-loaders/ */
 .loader,
 .loader:before,
 .loader:after {
