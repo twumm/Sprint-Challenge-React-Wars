@@ -20,11 +20,11 @@ export default function StarWarsList({  starWarsChars }) {
             </span>
           </div>
           <div className="character-stats">
-            <span>{character.eye_color}</span>
-            <span>{character.hair_color}</span>
-            <span>{character.skin_color}</span>
-            <span>{character.height}</span>
-            <span>{character.mass}</span>
+            <p>Eye color: {character.eye_color}</p>
+            <p>Hair color: {character.hair_color}</p>
+            <p>Skin color: {character.skin_color}</p>
+            <p>Height: {character.height}</p>
+            <p>Mass: {character.mass}</p>
           </div>
         </div>
       )
