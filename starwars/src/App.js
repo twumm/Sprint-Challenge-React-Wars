@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       starwarsChars: [],
       nextList: '',
-      previousList: ''
+      previousList: '',
+      onLoading: false
     };
   }
 
@@ -26,6 +27,7 @@ class App extends Component {
     // We then take that data and resolve it our state.
     fetch(URL)
       .then(res => {
+        this.toggleLoading()
         return res.json();
       })
       .then(data => {
@@ -33,12 +35,19 @@ class App extends Component {
           starwarsChars: data.results,
           nextList: data.next,
           previousList: data.previous,
+          onLoading: false,
         });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
+
+  toggleLoading = () => {
+    this.setState({
+      onLoading: true
+    })
+  }
 
   render() {
     return (
@@ -49,6 +58,7 @@ class App extends Component {
           nextListUrl={this.state.nextList}
           previousListUrl={this.state.previousList}
           getCharacters={this.getCharacters}
+          onLoading={this.state.onLoading}
         />
       </div>
     );
