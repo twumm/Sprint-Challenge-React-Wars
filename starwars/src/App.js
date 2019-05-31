@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import StarWarsDisplay from './components/StarWarsDisplay';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faMale, faFemale, faGenderless, faWeight } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
+
+library.add(faMale, faFemale, faGenderless, faWeight);
 
 class App extends Component {
   constructor() {
