@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './StarWars.css';
 
 export default function StarWarsList({  starWarsChars }) {
   return (
@@ -6,8 +7,8 @@ export default function StarWarsList({  starWarsChars }) {
       .map(character => (
         <div key={character.created} className="character-card">
           <div className="character-header">
-            <h5 id="character-name">{character.name}</h5>
-            <span id="character-name">{character.gender}</span>
+            <h4 id="character-name">{character.name}</h4>
+            <span id="character-gender">{character.gender}</span>
           </div>
           <div className="character-stats">
             <span>{character.eye_color}</span>
