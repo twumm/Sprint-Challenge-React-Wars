@@ -19,6 +19,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: .5px solid gray;
+  box-shadow: 0 4px 8px 0 rgba(148, 147, 147, 0.2), 0 6px 20px 0 rgba(179, 179, 179, 0.19);
 }
 
 #character-name {
@@ -28,4 +30,8 @@
 
 #character-gender {
   padding-right: 10px;
+}
+
+.character-stats p {
+  font-size: 1.2rem;
 }
