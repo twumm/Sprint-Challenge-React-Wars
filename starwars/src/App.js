@@ -5,7 +5,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      nextList: '',
+      previousList: ''
     };
   }
 
@@ -22,7 +24,11 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({
+          starwarsChars: data.results,
+          nextList: data.next,
+          previousList: data.previous,
+        });
       })
       .catch(err => {
         throw new Error(err);
